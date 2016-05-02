@@ -1,4 +1,11 @@
-# akka-http-slick
+# akka-http-slick-guice
+
+Forked from https://github.com/knoldus/akka-http-slick
+- Guice added
+- Changed Routes to Get, Put, Post, Delete and urls
+- Changed Json Parser from Lift to akka-http/Spray one
+- Some fixes
+
 
 ### Run unit test:
 ```
@@ -31,7 +38,7 @@ response:
 
  request:
 ```
-$ curl localhost:9000/bank/all
+$ curl localhost:9000/banks
 ```
 response:
 ```
@@ -42,7 +49,7 @@ response:
 
  request:
  ```
-   $  curl -XPOST 'localhost:9000/bank/save'  -d '{"name":"New Bank"}'
+   $  curl -XPOST 'localhost:9000/bank'  -d '{"name":"New Bank"}'
    ```
    
  response:
@@ -53,7 +60,7 @@ response:
 
   request:
   ```
-  $  curl -XPOST 'localhost:9000/bank/update'  -d '{"name":"Updated bank", "id":1}'
+  $  curl -XPUT 'localhost:9000/bank'  -d '{"name":"Updated bank", "id":1}'
   
   ```
   
@@ -66,7 +73,7 @@ response:
   request:
     
   ```
-  $ curl -XPOST 'localhost:9000/bank/delete/1
+  $ curl -XDELETE 'localhost:9000/bank/1
   
   ```
   response:

@@ -1,4 +1,4 @@
-package com.knoldus.connection
+package com.goralski.connection
 
 import org.slf4j.LoggerFactory
 

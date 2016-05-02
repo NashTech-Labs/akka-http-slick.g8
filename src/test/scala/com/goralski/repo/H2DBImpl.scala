@@ -1,6 +1,6 @@
-package com.knoldus.repo
+package com.goralski.repo
 
-import com.knoldus.connection.DBComponent
+import com.goralski.connection.DBComponent
 import org.slf4j.LoggerFactory
 
 
