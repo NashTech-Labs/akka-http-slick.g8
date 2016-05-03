@@ -3,8 +3,9 @@
 - slick : database access & relational mapping
 - guice: dependency injection
 
-
 Forked from https://github.com/knoldus/akka-http-slick
+
+Changes:
 - Guice added
 - Changed Routes to Get, Put, Post, Delete
 - Changed urls
