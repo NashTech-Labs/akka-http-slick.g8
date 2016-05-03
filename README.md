@@ -2,7 +2,8 @@
 
 Forked from https://github.com/knoldus/akka-http-slick
 - Guice added
-- Changed Routes to Get, Put, Post, Delete and urls
+- Changed Routes to Get, Put, Post, Delete
+- Changed urls
 - Changed Json Parser from Lift to akka-http/Spray one
 - Some fixes
 
