@@ -12,7 +12,7 @@ import org.scalatest.{BeforeAndAfter, Matchers, WordSpec}
 
 import scala.concurrent.Future
 
-class RouteTest extends WordSpec with Matchers with MockitoSugar with ScalatestRouteTest with JsonHelper with BeforeAndAfter {
+class RouteTest extends WordSpec with Matchers  with ScalatestRouteTest with JsonHelper with BeforeAndAfter {
 
   val bankToSave = Bank("ICICI bank")
   val bankToUpdate = Bank("Santander bank", Some(1))
