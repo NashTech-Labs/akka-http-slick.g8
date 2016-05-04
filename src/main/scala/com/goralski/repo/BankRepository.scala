@@ -47,6 +47,6 @@ trait BankRepository extends BankTable { this: DBComponent =>
 class BankRepositoryImpl extends BankRepository with H2DBImpl
 
 //use this for production
-//trait BankRepositoryImpl extends BankRepository with MySQLDBImpl
+//class BankRepositoryImpl extends BankRepository with MySQLDBImpl
 
 case class Bank(name: String, id: Option[Int] = None)
