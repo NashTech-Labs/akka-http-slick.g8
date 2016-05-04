@@ -7,7 +7,6 @@ import com.goralski.connection.H2DBImpl
 import com.goralski.json.JsonHelper
 import com.goralski.repo.{Bank, BankRepository}
 import com.google.inject.{AbstractModule, Guice}
-import org.scalatest.mock.MockitoSugar
 import org.scalatest.{BeforeAndAfter, Matchers, WordSpec}
 
 import scala.concurrent.Future

@@ -1,7 +1,6 @@
 package com.goralski.repo
 
 
-import javax.inject.Singleton
 
 import com.goralski.connection.{DBComponent, H2DBImpl}
 
