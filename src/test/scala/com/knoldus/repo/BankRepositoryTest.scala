@@ -1,4 +1,4 @@
-package com.goralski.repo
+package com.knoldus.repo
 
 import org.scalatest.FunSuite
 import org.scalatest.concurrent.ScalaFutures

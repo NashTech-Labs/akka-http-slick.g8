@@ -1,8 +1,8 @@
-package com.goralski.repo
+package com.knoldus.repo
 
 
 
-import com.goralski.connection.{DBComponent, H2DBImpl}
+import com.knoldus.connection.{DBComponent, H2DBImpl}
 
 import scala.concurrent.Future
 

@@ -1,7 +1,7 @@
-package com.goralski.json
+package com.knoldus.json
 
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
-import com.goralski.repo.Bank
+import com.knoldus.repo.Bank
 import spray.json.DefaultJsonProtocol
 
 trait JsonHelper extends SprayJsonSupport with DefaultJsonProtocol {

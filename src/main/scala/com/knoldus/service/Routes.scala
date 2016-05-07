@@ -1,11 +1,11 @@
-package com.goralski.service
+package com.knoldus.service
 
 import javax.inject.{Inject, Named}
 
 import akka.http.scaladsl.model.{HttpResponse, StatusCodes}
 import akka.http.scaladsl.server.Directives._
-import com.goralski.json.JsonHelper
-import com.goralski.repo.{Bank, BankRepository}
+import com.knoldus.json.JsonHelper
+import com.knoldus.repo.{Bank, BankRepository}
 import scala.concurrent.ExecutionContext.Implicits.global
 
 /**

@@ -1,11 +1,11 @@
-package com.goralski.service
+package com.knoldus.service
 
 import akka.http.scaladsl.model.ContentTypes._
 import akka.http.scaladsl.model.StatusCodes._
 import akka.http.scaladsl.testkit.ScalatestRouteTest
-import com.goralski.connection.H2DBImpl
-import com.goralski.json.JsonHelper
-import com.goralski.repo.{Bank, BankRepository}
+import com.knoldus.connection.H2DBImpl
+import com.knoldus.json.JsonHelper
+import com.knoldus.repo.{Bank, BankRepository}
 import com.google.inject.{AbstractModule, Guice}
 import org.scalatest.{BeforeAndAfter, Matchers, WordSpec}
 

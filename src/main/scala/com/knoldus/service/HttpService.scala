@@ -1,9 +1,9 @@
-package com.goralski.service
+package com.knoldus.service
 
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
-import com.goralski.repo.{Bank, BankRepository, BankRepositoryImpl}
+import com.knoldus.repo.{Bank, BankRepository, BankRepositoryImpl}
 import com.google.inject.{AbstractModule, Guice}
 
 
