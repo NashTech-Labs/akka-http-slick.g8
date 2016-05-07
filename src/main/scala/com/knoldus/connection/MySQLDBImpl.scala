@@ -5,7 +5,7 @@ import slick.driver.MySQLDriver
 /**
   * Created by satendra on 16/3/16.
   */
-class MySQLDBImpl extends DBComponent {
+trait MySQLDBImpl extends DBComponent {
 
 val driver = MySQLDriver
 

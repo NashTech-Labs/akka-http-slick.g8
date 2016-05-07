@@ -2,36 +2,35 @@ package com.knoldus.service
 
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
-
 import akka.stream.ActorMaterializer
-import com.knoldus.repo.{Bank, BankRepositoryImpl}
+import com.knoldus.repo.{Bank, BankRepository, BankRepositoryImpl}
+import com.google.inject.{AbstractModule, Guice}
 
 
+object HttpService extends App {
 
-object HttpService extends App with Routes with BankRepositoryImpl   {
+  private val injector = Guice.createInjector(new AbstractModule() {
+    override def configure() {
+      bind(classOf[BankRepository]).to(classOf[BankRepositoryImpl])
+    }
+  })
 
-  implicit val system:ActorSystem = ActorSystem()
+  private val bankService = injector.getInstance(classOf[Routes])
+
+  implicit val system: ActorSystem = ActorSystem()
 
   implicit val materializer = ActorMaterializer()
 
-  implicit val dispatcher= system.dispatcher
-  ddl.onComplete{
+  implicit val dispatcher = system.dispatcher
+
+  private val repositoryImpl: BankRepositoryImpl = new BankRepositoryImpl
+  repositoryImpl.ddl.onComplete {
     _ =>
-      create(Bank("SBI"))
-      create(Bank("PNB"))
-      create(Bank("RBS"))
-      Http().bindAndHandle(routes, "localhost", 9000)
+      repositoryImpl.createBank(Bank("SBI"))
+      repositoryImpl.createBank(Bank("PNB"))
+      repositoryImpl.createBank(Bank("RBS"))
+      Http().bindAndHandle(bankService.bankRoutes, "localhost", 9000)
   }
-
-
-
-
-  /**
-    *
-    * Insert data when start
-    *
-    */
-
 
 
 }
